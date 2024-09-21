@@ -5,7 +5,6 @@ public class b {
             p1 = new Point();
         }
 
-        System.out.println(p1); 
         // java compiler is stupid
     }
 }
