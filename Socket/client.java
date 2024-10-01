@@ -7,8 +7,7 @@ import java.net.Socket;
 public class client {
     public static void main(String[] args) {
         try {
-            // InetAddress inward = InetAddress.getLocalHost();
-            InetAddress inward = InetAddress.getByName("dazhyar");
+            InetAddress inward = InetAddress.getByName("172.20.10.2");
             Socket sck = new Socket("time.nist.gov", 13, inward, 10000);
             InputStream is = sck.getInputStream();
             InputStreamReader ir = new InputStreamReader(is);
