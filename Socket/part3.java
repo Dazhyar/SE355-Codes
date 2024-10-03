@@ -7,14 +7,13 @@ import java.io.OutputStreamWriter;
 
 public class part3 {
     public static void main(String[] args) {
-        try (Socket sck = new Socket("ipinfo.io", 80);) {
+        try (Socket sck = new Socket("whois.internic.net", 43);) {
             BufferedReader br = new BufferedReader(new InputStreamReader(sck.getInputStream()));
 
             OutputStream os = sck.getOutputStream();
             OutputStreamWriter out = new OutputStreamWriter(os, "UTF-8");
 
-            out.write("GET / HTTP/1.0\r\n");
-            out.write("Host: ipinfo.io\r\n\n");
+            out.write("google.com\n");
             out.flush();
 
             StringBuilder sb = new StringBuilder();
