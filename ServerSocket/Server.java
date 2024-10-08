@@ -5,7 +5,7 @@ import java.io.OutputStreamWriter;
 
 public class Server {
     public static void main(String[] args) {
-        try (ServerSocket server = new ServerSocket(5000)) {
+        try (ServerSocket server = new ServerSocket(50)) {
         while (true) {
             wait(server);
         }
